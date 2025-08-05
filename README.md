@@ -1,23 +1,23 @@
-# 🖥️ System Monitor Log
+# 🛡️ Laptop Protection Capture
 
-A simple project for monitoring system logs and tracking important events.  
-This repository helps you keep a record of your system activity in an organized way.
+A Python project that captures a photo from your laptop webcam and sends it to your **Telegram** whenever you log in.  
+This acts as a personal security/logging tool to keep track of login events.
 
 ---
 
 ## 🚀 Features
-- 📊 Monitor system activities
-- 📝 Store logs in a structured format
-- 🔍 Easy access and analysis
-- 🖥️ Lightweight and simple to use
+- 📸 Capture a snapshot from your laptop webcam  
+- 🕒 Saves the photo with a timestamped filename  
+- 📲 Sends the photo directly to your Telegram account  
+- ⚡ Runs automatically on Windows login using Task Scheduler  
 
 ---
 
 ## 📂 Project Structure
-sys-monitor-log/
-├── app.py # Main application
-├── requirements.txt # Dependencies
-└── README.md # Project documentation
+capture-project/
+├── capture.py # Main script
+├── requirements.txt # Python dependencies
+└── README.md # Documentation
 
 yaml
 Copy
@@ -27,46 +27,69 @@ Edit
 
 ## ⚙️ Installation
 
-1. Clone this repository:
+1. **Clone this repository**
    ```bash
-   git clone https://github.com/crazycanoon/sys-monitor-log.git
-   cd sys-monitor-log
-Create a virtual environment (optional but recommended):
-
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-Install required dependencies:
+   git clone https://github.com/yourusername/capture-project.git
+   cd capture-project
+Install dependencies
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-▶️ Usage
-Run the main script to start monitoring:
+Or manually:
 
 bash
 Copy
 Edit
-python app.py
-Logs will be generated and saved automatically.
+pip install opencv-python requests
+🔑 Telegram Setup
+Open Telegram → search for @BotFather.
 
-🤝 Contributing
-Contributions are welcome!
+Create a new bot → you’ll get a Bot Token.
 
-Fork the repo
+Start your bot with /start.
 
-Create a new branch
+Get your Chat ID:
 
-Commit your changes
+Send any message to your bot.
 
-Submit a pull request
+Open in browser:
+
+bash
+Copy
+Edit
+https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
+Look for "chat":{"id":123456789} → that’s your Chat ID.
+
+▶️ Usage
+Update capture.py with your BOT_TOKEN and CHAT_ID, then run:
+
+bash
+Copy
+Edit
+python capture.py
+A photo will be taken from the webcam
+
+Saved locally with a timestamp
+
+Sent to your Telegram instantly
+
+⚡ Auto-Run on Windows Login
+Open Task Scheduler (taskschd.msc).
+
+Create a new task → Trigger = At log on.
+
+Action = Start a program.
+
+Program/script = path to your Python executable.
+
+Add arguments = path to capture.py.
+
+Now every time you log in, the script runs automatically.
 
 📜 License
 This project is licensed under the MIT License.
 
 ✨ Author
-crazycanoon
+Your Name
