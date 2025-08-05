@@ -1,4 +1,4 @@
-# 🛡️ Laptop Protection Capture
+# 🛡️ System Protection Capture
 
 A Python project that captures a photo from your laptop webcam and sends it to your **Telegram** whenever you log in.  
 This acts as a personal security/logging tool to keep track of login events.
