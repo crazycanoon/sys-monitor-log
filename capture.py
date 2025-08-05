@@ -3,8 +3,8 @@ import datetime
 import requests
 
 # === CONFIG ===
-BOT_TOKEN = "7668396361:AAG0F-SjQFXr9gdJp9nYhiIjfVMjCUZldic"   # from BotFather
-CHAT_ID = "7045963417"       # your Telegram chat ID
+BOT_TOKEN = "<Enter your Bot Token>"  # from BotFather
+CHAT_ID = "<chat id eg. 234567890>"       # your Telegram chat ID
 
 def capture_and_send():
     # Open webcam
