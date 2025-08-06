@@ -4,7 +4,7 @@ import requests
 
 # === CONFIG ===
 BOT_TOKEN = "<Enter your Bot Token>"  # from BotFather
-CHAT_ID = "<chat id eg. 234567890>"       # your Telegram chat ID
+CHAT_ID = "<chat id eg. 234567890>"       # your Telegram chat ID.
 
 def capture_and_send():
     # Open webcam
